@@ -62,7 +62,7 @@ export class Matrix extends React.Component{
             let yCord = createRandomNumber(this.columnCount);
             let mineRepeated = false;
             mineArr.forEach((item)=>{
-                if(item.x === xCord && item.y === xCord){
+                if(item.x === xCord && item.y === yCord){
                     i = i-1;
                     mineRepeated = true;
                 } 
@@ -76,7 +76,6 @@ export class Matrix extends React.Component{
                 })
             }
         }
-        console.log(mineArr);
         this.setState({mineArr})
     }
 
@@ -114,6 +113,7 @@ export class Matrix extends React.Component{
                     return;
                 }
                 let matrixCount = this.rowCount * this.columnCount
+                console.log(this.safeAreaClicked, matrixCount, this.mineCount)
                 if(this.safeAreaClicked >= matrixCount - this.mineCount ){
                     let userValue =  window.confirm("Congratulations!! Play again?");
                     if(userValue){
