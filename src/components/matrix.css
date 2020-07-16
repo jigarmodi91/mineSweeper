@@ -1,0 +1,45 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+}
+
+p{
+    margin:10px;
+}
+.separator {
+    font-size: 16px;
+}
+input {
+    height: 25px;
+    font-size: 20px;
+    width: 90px;
+}
+input[type='button']{
+    height: 31px;
+    display: block;
+    margin: 10px auto 0;
+}
+.rowWrap{
+    height: 34px;
+}
+.cell{
+    width:30px;
+    height: 30px;
+    margin: 2px;
+    background-color: white;
+    display: inline-block;
+    color: black;
+    vertical-align: top;
+    text-align: center;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+.success {
+    background-color:green;
+}
+
+.error {
+    background-color:red;
+}
