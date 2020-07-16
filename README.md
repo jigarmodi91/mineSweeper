@@ -16,3 +16,13 @@ Implement a simplified game of minesweeper using HTML+CSS+JavaScript. It compris
 - Scalable solution is  a plus
 - Code needs to posted on Github.com and url to be shared
 - You are free to add more features 
+
+## Solution
+
+Steps to run this app
+- Fork the repository
+- run `npm install` to install the dependancies
+- run `npm run start` to start a localhost server 
+- The game can be accessed by "http://localhost:3000/" url
+
+Note: `create-react-app` boiler plate has been used to create the boilerplate of this app
