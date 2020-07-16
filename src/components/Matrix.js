@@ -95,14 +95,16 @@ export class Matrix extends React.Component{
                 }
                 gameOver = true;
             } else {
-                let numberOfMines = this.getNumberOfMinesAround(xCord,yCord);
-                rows[yCord][xCord] = {
-                    ...cellObj,
-                    value :numberOfMines,
-                    isVisible : true,
-                    className: 'success'
+                if(rows[yCord][xCord].value === ''){
+                    let numberOfMines = this.getNumberOfMinesAround(xCord,yCord);
+                    rows[yCord][xCord] = {
+                        ...cellObj,
+                        value :numberOfMines,
+                        isVisible : true,
+                        className: 'success'
+                    }
+                    this.safeAreaClicked = this.safeAreaClicked + 1;
                 }
-                this.safeAreaClicked = this.safeAreaClicked + 1;
             }
             this.setState({rows:[...rows]},()=>{
                 if(gameOver){
