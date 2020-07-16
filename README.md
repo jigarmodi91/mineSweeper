@@ -20,7 +20,7 @@ Implement a simplified game of minesweeper using HTML+CSS+JavaScript. It compris
 ## Solution
 
 Steps to run this app
-- Fork the repository
+- Clone the repository
 - run `npm install` to install the dependancies
 - run `npm run start` to start a localhost server 
 - The game can be accessed by "http://localhost:3000/" url
