@@ -107,15 +107,29 @@ export class Matrix extends React.Component{
             }
             this.setState({rows:[...rows]},()=>{
                 if(gameOver){
-                    window.confirm("You have blown the field away :(");
+                    let userValue = window.confirm("You have blown the field away :( Play again?");
+                    if(userValue){
+                        this.resetGame();
+                    }
                     return;
                 }
                 let matrixCount = this.rowCount * this.columnCount
                 if(this.safeAreaClicked >= matrixCount - this.mineCount ){
-                    window.confirm("Congratulations!!");
+                    let userValue =  window.confirm("Congratulations!! Play again?");
+                    if(userValue){
+                        this.resetGame();
+                    }
                 }
             })
         }
+    }
+
+    resetGame() {
+        this.safeAreaClicked = 0; 
+        this.setState({
+            rows : [],
+            mineArr : []
+        });
     }
 
     getNumberOfMinesAround(xCord,yCord){
